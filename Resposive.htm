@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Responsive Web Design</title>
+  <meta name="viewports" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+  <h2>Responsive Web Design</h2>
+   <p>Responsive web design is about creating web pages that look good on all devices!<br>
+   A responsive web design will automatically adjust for different screen sizes and viewports.</p>
+   
+   <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones).</p>
+   
+   
+  <h2>Setting the viewports</h2>
+   <pre>
+     <p> (meta name="vieqwport" content="width=device-width, initial-scale=1.0"</p>
+     <p>This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.</p>
+   </pre>
+   
+   <h2>Responsive Images</h2>
+    <p>responsive images are images that scale nicely to fti any browser size</p>
+    <h2>Using the width Property</h2>
+     <p>If the CSS width property is set to 100%, the image will be responsive and scale up and down.</p>
+     
+     <img src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=400" style="width:100%;">
+     
+     <p>Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the <mark><em>max-width</em></mark> property instead.</p>
+     <p>If the <mark>max-width</mark> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size. However, if you make the browser window smaller, the image will still scale down. resizing the brwoser can see the effect.</p><hr>
+     
+     <img src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=400" width:100%; height:auto;>
+     
+     <h2>Show different images dependign on browser width</h2>
+      <p>The HTML <mark>picture</mark> element allows you to define different images for different browser window sizes.
+      Resize the browser window to see how the image below changes depending on the width.</p>
+      
+      <div class="Images1">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/253905/pexels-photo-253905.jpeg?auto=compress&cs=tinysrgb&w=400" media="(max-width: 600px)">
+          <source srcset="https://images.pexels.com/photos/417014/pexels-photo-417014.jpeg?auto=compress&cs=tinysrgb&w=400" media="(max-width: 1500px">
+          <source srcset="pexels-photo-417014.jpeg" <img src="https://images.pexels.com/photos/417014/pexels-photo-417014.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Escalator" style="width:auto;">
+        </picture>
+      </div><hr>
+      
+      <div class="text1">
+      <h2>Responsive Text Size</h2>
+       <p>The text size can be set with a "vw" unit, which means the "viewport width". That way the text size will follow the size of the browser window.</p>
+       
+      <div class="Responsive1">
+       <h2 style="font-size:10vw;">Responsive text</h2>
+        <p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+        <p style="font-size:5vw;"> use the "vw" unit when sizing teh text. 10vw will set the size to 10% of the viewport width.</p>
+        <p>Viewport is the browser window size. 1VW = 1% OF VIEWPORT WIDTH. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+      </div>
+       </div>
+       
+      <h2>Media Queries</h2>
+       <pre>
+         <p>In addition to resize text and images, it is also common to use media queries in responsive web pages.
+
+With media queries you can define completely different styles for different browser sizes.
+
+Example: resize the browser window to see that the three div elements below will display horizontally on large screens and stack vertically on small screens:</p>
+       </pre>
+       
+       <style>
+         * {box-sizing: border-box;}
+         .left {background-color: #2196F3; padding: 20px; float: left; width: 20%;}
+         .main {background-color: #f1f1f1; padding: 20px; float: left; width: 60%;}
+         .right {background-color: #04AA6D; padding: 20px; float: left; width: 20%;}
+         
+         /* Use a Media query to add a break point at 800px:*/
+         @media screen and (max-width:800px) {
+           .left, .main, .right {width: 100%; /*The width is 100%, when the viewport is 800px or smaller*/}
+         }
+       </style>
+       
+       <div class="left">
+         <p>left Menu</p>
+       </div>
+       <div class="main">
+         <p>Main content</p>
+       </div>
+       <div class="right">
+         <p>Right content</p>
+       </div>
+       
+       
+       <h2>Responsive Web page- full example</h2>
+        <p>A responsive web page should look good on large desktop screens and on small mobile phones.</p>
+        <a href="\\hamiltoncollege.hamcoll.sa.edu.au\files$\home\students\Rehan.gurung\Desktop\Notepad\Html\respwebpage.htm" target="_blank">responsive web page htm.</a>
+    
+      <h2>Responsive Web Design- Frameworks</h2>
+       <p>All popular CSS Frameworks offer responsive design. They are free, and easy to use.</p>
+       
+      <h2>W3.CSS</h2>
+       <p>W3.CSS is a modern CSS framework with support for desktop, tablet, and mobile design by default.<br>
+        W3.CSS is smaller and faster than similar CSS frameworks.<br>
+        W3.CSS is designed to be independent of jQuery or any other JavaScript library.</p>
+		
+		<p><a href="\\hamiltoncollege.hamcoll.sa.edu.au\files$\home\students\Rehan.gurung\Desktop\Notepad\Html\W3CSS.htm" target="_blank">This link</a> will take you to another html doc with W3.CSS aspects.</p>
+		
+	   <h2>Bootstrap</h2>
+	    <p>Another popular CSS framework is Bootstrap</p>
+		<a href="" target="_blank">Bootstrap htm</a>
+		
+		
+</body>
+</html>
